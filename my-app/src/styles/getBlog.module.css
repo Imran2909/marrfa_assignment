@@ -1,0 +1,302 @@
+
+/* Base styles */
+.container {
+  width: 80%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.searchBar {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  margin-left: -1.2%;
+}
+
+.input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.card p {
+  color: #555;
+  margin: 8px 0;
+}
+
+.admin {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.likes {
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.filterOption {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filterOption input {
+  margin-right: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownButton {
+  padding: 7px 20px;
+  background-color: #007bff;
+  color: white;
+  padding-bottom: 34px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: -10px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: -35px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 15px;
+  width: 150px;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: -6px 36px 0px 0px;
+  width: 100%;
+}
+
+.dropdownItem p {
+  margin-left: -54px;
+}
+
+.dropdownItem input {
+  margin-right: 8px;
+  margin-left: -10px;
+}
+
+.dropdownItem:last-child {
+  margin-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Responsive Styles */
+
+/* 1400px to 1200px */
+@media (max-width: 1400px) and (min-width: 1200px) {
+  .input {
+    width: 50%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dropdownMenu {
+    width: 200px;
+  }
+}
+
+/* 1200px to 950px */
+@media (max-width: 1200px) and (min-width: 950px) {
+  .input {
+    width: 55%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dropdownMenu {
+    width: 180px;
+  }
+}
+
+/* 950px to 700px */
+@media (max-width: 950px) and (min-width: 700px) {
+  .input {
+    width: 70%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dropdownMenu {
+    width: 160px;
+  }
+}
+
+/* 700px to 500px */
+@media (max-width: 700px) and (min-width: 500px) {
+  .input {
+    width: 80%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .dropdownMenu {
+    width: 140px;
+  }
+}
+
+/* 500px to 350px */
+@media (max-width: 500px) and (min-width: 350px) {
+  .input {
+    width: 85%;
+  }
+
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dropdownMenu {
+    width: 120px;
+  }
+
+  .dropdownButton {
+    padding: 5px 15px;
+  }
+}
+
+/* 350px to 150px */
+@media (max-width: 350px) and (min-width: 150px) {
+  .input {
+    width: 90%;
+  }
+
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dropdownMenu {
+    width: 100px;
+  }
+
+  .dropdownButton {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+}
+
+/* 150px to 0px */
+@media (max-width: 150px) {
+  .input {
+    width: 95%;
+  }
+
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dropdownMenu {
+    width: 90px;
+  }
+
+  .dropdownButton {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
